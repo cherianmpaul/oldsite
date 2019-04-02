@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Web Hosting for Personal Webistes</title>
+<meta name="keywords" content="personal websites, web hosting, cheap and best web hosting" />
+<meta name="description" content="web hosting for small business and professionals" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<h1><a href="#">CherianHosts.com</a></h1>
+	<h2><a href="http://www.cherianmathew.com/">by Cherian Mathew</a></h2>
+</div>
+<div id="menu">
+	<ul>
+		<li class="first"><a href="index.htm" accesskey="1" title="">Home</a></li>
+		<li><a href="hosting.htm" accesskey="4" title="">Hosting Plans</a></li>
+		<li><a href="contact.php" accesskey="5" title="">Contact Me</a></li>
+	</ul>
+</div>
+<div id="splash"><img src="images/img2.jpg" alt="" width="514" height="213" /></div>
+<div id="content" class="bg2">
+	<div id="colOne">
+		<h2>Contact Me!</h2>
+
+<?php
+  If ($_POST["my_FirstName"] <> ""  and $_POST["my_Email"] <>  "" and $_POST["my_check"] == "eumis") 
+{
+$to = $_POST["my_Email"];
+$subject = "Email from CherianHosts.com";
+
+$message = "Dear " . $_POST["my_FirstName"]  . "\n" . "\n" ;
+$message = $message . "This message is sent from CherianHosts.com." . "\n" . "\n" ;
+$message = $message . $_POST["my_FirstName"] . " has requested my email address." ."\n" . "\n";
+$message = $message . "If you are not " . $_POST["my_FirstName"] . ",  Please delete this message" . "\n" . "\n";
+$message = $message . "My email address is cherian@cherianhosts.com" . "\n"  . "\n";
+$message = $message . "Thank You." . "\n" . "\n";
+$message = $message . "To unsubscribe or change subscriber options visit:" . "\n";
+$message = $message . "http://www.cherianhosts.com/accounts.php?em=" . $_POST["my_Email"];
+
+
+$from = "Cherian Mathew cherian@cherianhosts.com";
+$headers = "From:" . $from;
+mail($to,$subject,$message,$headers)
+?>
+
+<p><h4>Dear  <?php echo $_POST["my_FirstName"]; ?> ,</h4></p>
+
+<p>Thank you for requesting my email address. I have sent an email to your 
+email address.&nbsp; You can check your email and reply to me....</p>
+<p>Thank you once again,</p>
+<p>Cherian Mathew. </p>
+
+<?php 
+}
+Else 
+{
+?>
+
+<h3>Request my email address</h3>
+<p>Please fill up this form to request my email address. When you submit this 
+form with your email address, I will send an email to your email address 
+immediately with my email address.  </p>
+<form action="contact.php" method="post">
+  <p>Please enter your information:</p>
+    <table>
+      <tr>
+        <td align="right">First Name</td>
+        <td><input size="15" name="my_FirstName" ><font color="#ff0000" size="5">*</font>
+        </td>
+      </tr>
+      <tr>
+        <td align="right">Email</td>
+        <td>
+        <input size="25" name="my_Email" ><font color="#ff0000" size="5">*</font>
+        </td>
+      </tr>
+          </table>
+Enter the text as it is shown in the Image below: <br>
+        <input size="25" name="my_check" ><font color="#ff0000" size="5">*</font><br>
+<img src="images/human.jpg">
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <input type="submit" value="Send Email" class="forminput">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="reset" value="Clear" class="forminput"> </p>
+</form>
+
+<p>If u are planning to buy a hosting plan you can make the payment though Paypal.com or if you are in India, you can send me a cheque or DD. You can also make the payment through Western Union Money Transfer.</p>
+
+<?php 
+}
+?>
+
+<p><br>
+	<center><a href="https://www.google.com/a/" target="new"><img src="images/connect.jpg"></a></center>
+</p>
+		
+	</div>
+	<div id="colTwo">
+		<h2>Hosting Plans</h2>
+		<h3>Starter Plan</h3>
+		<p>one .com domain name, 10 MB Space, unlimited Email Address, unlimited site traffic, Windows Hostings @ $30/Year<a href="hosting.htm">More&#8230;</a></p>
+		<h3>Deluxe Plan</h3>
+		<p>one .com domain name, 15 MB Space, unlimited Email Address, unlimited site traffic, Windows Hostings @ $40/Year<a href="hosting.htm">More&#8230;</a></p>
+		<h3>Premium Plan</h3>
+		<p>one .com domain name, 20 MB Space, unlimited Email Address, unlimited site traffic, Windows Hostings @ $50/Year <a href="hosting.htm">More&#8230;</a></p>
+<!-- Begin Volusion Live Chat -->
+<div align="center" id="VolusionLiveChat"><a href="http://www.volusion.com/livechat_software.asp">Free Live Chat Software</a></div>
+<script defer type="text/javascript" src="https://livechat.volusion.com/script.aspx?id=68901"></script>
+<!-- End Volusion Live Chat -->
+
+	</div>
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<div id="footer" class="bg3">
+	<p>Copyright &copy; 2007 CherianHosts.com. Design by <a href="http://www.cherianmathew.com"><strong>Cherian Mathew</strong></a></p>
+</div>
+</body>
+</html>
