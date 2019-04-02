@@ -17,7 +17,7 @@
 	<ul>
 		<li class="first"><a href="index.htm" accesskey="1" title="">Home</a></li>
 		<li><a href="hosting.htm" accesskey="4" title="">Hosting Plans</a></li>
-		<li><a href="contact.php" accesskey="5" title="">Contact Me</a></li>
+		<li><a href="contact.htm" accesskey="5" title="">Contact Me</a></li>
 	</ul>
 </div>
 <div id="splash"><img src="images/img2.jpg" alt="" width="514" height="213" /></div>
